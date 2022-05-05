@@ -1,6 +1,6 @@
 function getFormValues(e) {
-  const formTitle = {getGlobalVariables()};
-  const namedValues = {e};
+  const formTitle = getGlobalVariables().formTitle;
+  const namedValues = e.namedValues;
 
   scriptVerbose(namedValues);
 

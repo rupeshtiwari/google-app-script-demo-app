@@ -9,7 +9,7 @@ Welcome to my demo app for Google app script.
 
  
 ## Google app script Project Creation steps
-
+Do not use ES6 features like `Destructuring assignment` is not supported in `.gs` file. 
 ### Step 1: Enable Google Apps Script API**
 
 Enable it by visiting https://script.google.com/home/usersettings then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.

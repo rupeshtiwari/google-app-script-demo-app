@@ -6,22 +6,34 @@
     </head>
 
     <body>
-        <p>Thanks for registering for  <b>
-                <?= candidate.activity ?> 
-            </b> competition.</p>
-            <b>
+        <div>
+            <p>Thanks for registering for <b>
+                    <?= candidate.competitionType ?>
+                </b> competition.</p>
 
-            <br/>
 
-        <p>Contact:- 
-            <b> <?= candidate.name ?> </b>  <br>
-            <b>
-                <?= candidate.phone ?>
-            </b> <br>
-        </p>
-        <p>
-            You will be contacted soon!
-        </p>
+        </div>
+
+        <div>
+
+            <p>Contact:-
+                <b>
+                    <?= candidate.name ?>
+                    (
+                    <?= candidate.phone ?> )
+                </b>
+            </p>
+
+        </div>
+
+
+        <div>
+            <p>
+                You will be contacted soon!
+            </p>
+        </div>
+
+
     </body>
 
 </html>

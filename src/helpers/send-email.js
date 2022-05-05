@@ -1,13 +1,15 @@
-function sendEmail(e, attachments) {
-  const form = getFormValues(e);
+function sendEmail(e, attachments, candidate) {
   const recipient = form.email;
+  if (!isValidEmail(recipient)) return;
+
+  const form = getFormValues(e);
   const template = HtmlService.createTemplateFromFile('src/helpers/email.html');
 
-  template.candidate = {
-    name: form.fullName,
-    phone: form.phone,
-    activity: form.activity,
-  };
+  scriptVerbose(form);
+
+  template.candidate = candidate;
+
+  scriptVerbose(template.candidate);
 
   const htmlBody = template.evaluate().getContent();
 
@@ -21,4 +23,12 @@ function sendEmail(e, attachments) {
       name: 'Event Admin',
     }
   );
+}
+
+function isValidEmail(email) {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
 }
