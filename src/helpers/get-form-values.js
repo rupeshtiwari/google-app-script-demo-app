@@ -8,7 +8,7 @@ function getFormValues(e) {
     fullName: namedValues[formTitle.fullName][0],
     email: namedValues[formTitle.email][0],
     phone: namedValues[formTitle.phone][0],
-    eventClassification: namedValues[formTitle.eventClassification][0],
+    competitionType: namedValues[formTitle.competitionType][0],
     guardianName: namedValues[formTitle.guardianName][0],
     candidateName: namedValues[formTitle.candidateName][0],
     teacherName: namedValues[formTitle.teacherName][0],
@@ -23,4 +23,3 @@ function getFormValues(e) {
 
   return form;
 }
-

@@ -1,5 +1,4 @@
-function getCandidate(registerationForm) {
-  const form = registerationForm;
+function getCandidateFromRegistrationForm(form) {
   const candidate = {
     fullName: form.fullName,
     competitionType: form.competitionType,
@@ -19,6 +18,7 @@ function getCandidateFromSheetRow(row) {
     fullName: row[formTitle.fullName],
     phone: row[formTitle.phone],
     competitionType: row[formTitle.competitionType],
+    email: row[formTitle.email],
   };
 
   scriptVerbose(candidate);

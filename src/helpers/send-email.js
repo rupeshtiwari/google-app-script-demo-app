@@ -4,11 +4,12 @@ function sendEmail(e, props) {
   const subject = props.subject;
   const templateUrl = props.templateUrl;
   const senderName = props.senderName || 'Event Admin';
+  const recipient = candidate.email;
 
-  const recipient = form.email;
-  if (!isValidEmail(recipient)) return;
+  if (!isValidEmail(recipient)) {
+    console.warn(`Invalid Email Entered ${recipient}`);
+  }
 
-  const form = getFormValues(e);
   const template = HtmlService.createTemplateFromFile(templateUrl);
   template.candidate = candidate;
   const htmlBody = template.evaluate().getContent();

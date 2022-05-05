@@ -9,7 +9,7 @@ function getGlobalVariables() {
       fullName: 'Full Name',
       email: 'Email',
       phone: 'Phone',
-      eventClassification: 'Competition Type',
+      competitionType: 'Competition Type',
       guardianName: 'Guardian Name',
       candidateName: 'Candidate Name',
       teacherName: 'Teacher Name',

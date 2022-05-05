@@ -1,9 +1,9 @@
 function register(e) {
   const form = getFormValues(e);
-  const candidate = getCandidate(form);
+  const candidate = getCandidateFromRegistrationForm(form);
 
   sendEmail(e, {
-    attachments: [cert],
+    attachments: [],
     candidate: candidate,
     subject: 'Confirmation of Registration',
     templateUrl: 'src/helpers/confirmation-email.html',
