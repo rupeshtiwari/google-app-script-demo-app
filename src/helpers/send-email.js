@@ -4,11 +4,13 @@ function sendEmail(props) {
   const subject = props.subject;
   const templateUrl = props.templateUrl;
   const senderName = props.senderName || 'Event Admin';
-  const recipient = candidate.email;
+  let recipient = candidate.email;
+  if (!recipient) return;
+  recipient = recipient.trim();
 
   if (!isValidEmail(recipient)) {
     console.warn(`Invalid Email Entered ${recipient}`);
-    
+
     return;
   }
 

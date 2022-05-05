@@ -41,3 +41,4 @@ clasp logs --watch
 - [Clasp Guide](https://github.com/google/clasp/blob/master/README.md#logs)
 - [Add Button on Sheet](https://www.youtube.com/watch?v=ZcNmur6xiX4)
 - [Load drop down from spread sheet](https://www.youtube.com/watch?v=pmQdrAIdfGM&t=5s)
+- [Send SMS](https://www.clicksend.com/us/pricing/us/)
