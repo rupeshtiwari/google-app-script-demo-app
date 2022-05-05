@@ -39,4 +39,5 @@ clasp logs --watch
 ## Dev Resources
 - [Use VsCode for GoogleSheet Development](https://www.youtube.com/watch?v=tWhXjVVLAYk&t=35s)
 - [Clasp Guide](https://github.com/google/clasp/blob/master/README.md#logs)
-
+- [Add Button on Sheet](https://www.youtube.com/watch?v=ZcNmur6xiX4)
+- [Load drop down from spread sheet](https://www.youtube.com/watch?v=pmQdrAIdfGM&t=5s)
