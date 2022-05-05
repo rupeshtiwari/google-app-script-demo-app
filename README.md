@@ -24,7 +24,18 @@ clasp clone "1CVmMy8oe0o8LfBuhnqOR2PTEH90jSpdcSpo_C7jn69PKSwF_P_HjDLM-"
 clasp push
 ```
 
+### Step 3 Development Tooling
+
+```
+clasp push --watch --force
+clasp logs --setup 
+# enter project id from .clasp.json file
+clasp logs --watch
+
+```
+
+
 ## Dev Resources
 - [Use VsCode for GoogleSheet Development](https://www.youtube.com/watch?v=tWhXjVVLAYk&t=35s)
-
+- [Clasp Guide](https://github.com/google/clasp/blob/master/README.md#logs)
 

@@ -1,7 +1,7 @@
-function getForm(e) {
+function getFormValues(e) {
   const namedValues = e.namedValues;
   const vars = getGlobalVariables();
-  const form = vars.form;
+  const form = vars.formTitle;
   return {
     fullName: namedValues[form.fullName],
     email: namedValues[form.email],

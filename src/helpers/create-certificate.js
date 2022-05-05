@@ -1,17 +1,21 @@
 function createCertificate(e) {
-  const form = getForm(e);
-  const certificateName = `Certificate ${form.name}`;
-  const props = getGlobalVariables();
-  const certificateFolder = DriveApp.getFolderById(props.certificateFolderId);
-  const templateDoc = DriveApp.getFileById(props.certificateTemplateDocId);
+  const form = getFormValues(e);
+  const certificateName = `Certificate ${form.fullName}`;
+  const vars = getGlobalVariables();
+  const certificateFolder = DriveApp.getFolderById(vars.certificateFolderId);
+  const templateDoc = DriveApp.getFileById(vars.certificateTemplateDocId);
   const tempCertificateDoc = templateDoc.makeCopy(certificateFolder);
   const tempCertificateDocEdit = DocumentApp.openById(
     tempCertificateDoc.getId()
   );
-  tempCertificateDocEdit.getBody().replaceText('{NAME}', form.name);
-  tempCertificateDocEdit
-    .getBody()
-    .replaceText('{EVENT}', form.eventActivities.join(','));
+  let body = tempCertificateDocEdit.getBody();
+  console.log(body.getText());
+  var text = body.getText();
+
+  text = text.replace('{NAME}', form.fullName);
+  text = text.replace('{EVENT}', form.eventClassification);
+  body.setText(text);
+  console.log(body.getText());
   tempCertificateDocEdit.saveAndClose();
   const pdf = tempCertificateDocEdit
     .getAs(MimeType.PDF)
