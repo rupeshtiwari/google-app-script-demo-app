@@ -1,9 +1,5 @@
-
-
 function onSubmit(e) {
- // uploadMedia(e)
- const cert = createCertificate(e);
- sendEmail(e, [cert]);
+  register(e);
 }
 
 const vars = getGlobalVariables();

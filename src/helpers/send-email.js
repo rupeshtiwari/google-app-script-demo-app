@@ -1,26 +1,26 @@
-function sendEmail(e, attachments, candidate) {
+function sendEmail(e, props) {
+  const attachments = props.attachments;
+  const candidate = props.candidate;
+  const subject = props.subject;
+  const templateUrl = props.templateUrl;
+  const senderName = props.senderName || 'Event Admin';
+
   const recipient = form.email;
   if (!isValidEmail(recipient)) return;
 
   const form = getFormValues(e);
-  const template = HtmlService.createTemplateFromFile('src/helpers/email.html');
-
-  scriptVerbose(form);
-
+  const template = HtmlService.createTemplateFromFile(templateUrl);
   template.candidate = candidate;
-
-  scriptVerbose(template.candidate);
-
   const htmlBody = template.evaluate().getContent();
 
   GmailApp.sendEmail(
     recipient,
-    'Thankyou',
+    subject,
     'You need html to view this page contact admin',
     {
       htmlBody,
       attachments,
-      name: 'Event Admin',
+      name: senderName,
     }
   );
 }

@@ -1,6 +1,6 @@
 function createCertificate(candidate) {
   const vars = getGlobalVariables();
-  const name = candidate.name;
+  const name = candidate.fullName;
   const competitionType = candidate.competitionType;
 
   const certificateName = `Certificate ${name}`;
