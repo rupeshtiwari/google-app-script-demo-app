@@ -2,11 +2,11 @@ function register(e) {
   const form = getFormValues(e);
   const candidate = getCandidateFromRegistrationForm(form);
 
-  sendEmail(e, {
+  sendEmail({
     attachments: [],
     candidate: candidate,
     subject: 'Confirmation of Registration',
-    templateUrl: 'src/helpers/confirmation-email.html',
+    templateUrl: 'src/apis/register/helpers/confirmation-email.html',
     senderName: 'Event Admin',
   });
 }

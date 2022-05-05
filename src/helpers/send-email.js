@@ -1,4 +1,4 @@
-function sendEmail(e, props) {
+function sendEmail(props) {
   const attachments = props.attachments;
   const candidate = props.candidate;
   const subject = props.subject;
@@ -8,6 +8,8 @@ function sendEmail(e, props) {
 
   if (!isValidEmail(recipient)) {
     console.warn(`Invalid Email Entered ${recipient}`);
+    
+    return;
   }
 
   const template = HtmlService.createTemplateFromFile(templateUrl);
@@ -24,6 +26,8 @@ function sendEmail(e, props) {
       name: senderName,
     }
   );
+
+  scriptInfo(`Email is sent successfully to ${JSON.stringify(candidate)}`);
 }
 
 function isValidEmail(email) {
