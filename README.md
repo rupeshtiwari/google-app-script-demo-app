@@ -1,4 +1,5 @@
 # Google App Script Sample 
+Welcome to my demo app for Google app script. 
 
 ## Requirement 
 - User can register for a particular event 

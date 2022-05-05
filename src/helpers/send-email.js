@@ -1,13 +1,16 @@
 function sendEmail(e, attachments) {
   const form = getFormValues(e);
   const recipient = form.email;
-  const template = HtmlService.createTemplateFromFile('./email.html');
+  const template = HtmlService.createTemplateFromFile('src/helpers/email.html');
+
   template.candidate = {
     name: form.fullName,
     phone: form.phone,
     activity: form.activity,
   };
+
   const htmlBody = template.evaluate().getContent();
+
   GmailApp.sendEmail(
     recipient,
     'Thankyou',

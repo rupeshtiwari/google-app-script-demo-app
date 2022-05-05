@@ -1,10 +1,11 @@
 function getGlobalVariables() {
   return {
+    isDebugLogAllowed: true,
     mediaFolderId: '1-cjZmZRlc7YYZExd9UpRkXfuoXEefcbp',
     certificateFolderId: '1mp-lrpzLNA85NOU5CWxpakiEverLoRy1',
     certificateTemplateDocId: '1ZvR9VTMH9XBFsTW1wJldjGPDLX10wK_wcDpPivBftCA',
     sheetId: '1-k7UIGcFCGBElT0aSZmhrfet_Z1Lfx0RQFJeGta7IV0',
-    form: {
+    formTitle: {
       fullName: 'Full Name',
       email: 'Email',
       phone: 'Phone',

@@ -9,13 +9,13 @@ function createCertificate(e) {
     tempCertificateDoc.getId()
   );
   let body = tempCertificateDocEdit.getBody();
-  console.log(body.getText());
+  scriptVerbose(body.getText());
   var text = body.getText();
 
   text = text.replace('{NAME}', form.fullName);
   text = text.replace('{EVENT}', form.eventClassification);
   body.setText(text);
-  console.log(body.getText());
+  scriptVerbose(body.getText());
   tempCertificateDocEdit.saveAndClose();
   const pdf = tempCertificateDocEdit
     .getAs(MimeType.PDF)
