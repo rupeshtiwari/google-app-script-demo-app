@@ -1,0 +1,23 @@
+{
+  "name": "google-app-script",
+  "version": "1.0.0",
+  "description": "- User can register for a particular event \r - After registration user will receive an email of confirmation\r - Admin can send bulk email to all users with their certificate of completion pdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rupeshtiwari/google-app-script-demo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rupeshtiwari/google-app-script-demo-app/issues"
+  },
+  "homepage": "https://github.com/rupeshtiwari/google-app-script-demo-app#readme",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.47"
+  }
+}

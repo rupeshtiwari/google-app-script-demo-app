@@ -16,3 +16,16 @@ function moveMediaFile(e, targetFolder) {
   const file = DriveApp.getFileById(fileId);
   file.moveTo(targetFolder);
 }
+
+function isMediaAvailable(e) {
+  const vars = getGlobalVariables();
+  return e.namedValues[vars.form.media][0].length > 0;
+}
+
+function uploadMedia(e) {
+  if (!isMediaAvailable(e)) return;
+
+  const mediaFolderId = getGlobalVariables().mediaFolderId;
+  const subFolderInMedia = createFolder(e, mediaFolderId);
+  moveMediaFile(e, subFolderInMedia);
+}
