@@ -7,7 +7,7 @@
 
     <body>
         <div>
-            <p>Thanks for registering for <b>
+            <p>Thanks <b><?= candidate.fullName ?></b> for registering for <b>
                     <?= candidate.competitionType ?>
                 </b> competition.</p>
 
@@ -16,11 +16,9 @@
 
         <div>
 
-            <p>Contact:-
+            <p>Feel free to Contact us:-
                 <b>
-                    <?= candidate.fullName ?>
-                    (
-                    <?= candidate.phone ?> )
+                    <?= candidate.contact ?>
                 </b>
             </p>
 

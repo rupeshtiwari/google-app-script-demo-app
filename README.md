@@ -42,3 +42,5 @@ clasp logs --watch
 - [Add Button on Sheet](https://www.youtube.com/watch?v=ZcNmur6xiX4)
 - [Load drop down from spread sheet](https://www.youtube.com/watch?v=pmQdrAIdfGM&t=5s)
 - [Send SMS](https://www.clicksend.com/us/pricing/us/)
+- [Sending SMS using Twilio](https://www.youtube.com/watch?v=Au4W8vUUbtM)
+- [Sending WhatsApp](https://www.youtube.com/watch?v=PxphXQmtHLo)
