@@ -19,7 +19,8 @@ function sendWhatsapp(candidate, message, row) {
     },
   };
   const result = UrlFetchApp.fetch(url, options);
-  if (result.getResponseCode() == '200') {
-    scriptInfo(`SMS sent successfully to ${candidate.fullName}`);
+  
+  if (result.getResponseCode() == 200) {
+    scriptInfo(`Whatsapp message is sent successfully to ${candidate.fullName}`);
   }
 }
